@@ -13,19 +13,20 @@ function distanceTravelledInFeet(from, to) {
 
 function calculatesFarePrice(start, destination) {
     
+    const eq = (Math.abs(destination - start)) * 264
     let fare;
 
-    if ((Math.abs(destination - start)) * 264 <= 400) { 
+    if ( eq <= 400) { 
         fare = 0;
         }
-        else if ((Math.abs(destination - start) * 264) < 2000 > 0 ) {
-          fare =((Math.abs(destination - start) * 264) - 400) * .02;
+        else if (eq < 2000 > 0 ) {
+          fare =(eq - 400) * .02;
        }
-        else if  ((Math.abs(destination - start) * 264) < 2500 > 0) {
+        else if  (eq < 2500 > 0) {
             fare = 1 * 25;
         }
-        else if ((Math.abs(destination - start) * 264) > 2500) {
-             fare = 'cannot travel that far'
+        else if (eq > 2500) {
+             fare = 'cannot travel that far';
         }
 
       return fare      
