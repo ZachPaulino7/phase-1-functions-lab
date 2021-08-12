@@ -12,9 +12,10 @@ function distanceTravelledInFeet(from, to) {
 }
 
 function calculatesFarePrice(start, destination) {
-    let fare;
     
-    if ((Math.abs(destination - start)) * 266 <= 400) { 
+    let fare;
+
+    if ((Math.abs(destination - start)) * 264 <= 400) { 
         fare = 0;
         }
         else if ((Math.abs(destination - start) * 264) < 2000 > 0 ) {
